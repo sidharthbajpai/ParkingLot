@@ -22,7 +22,7 @@ public class ParkingService {
 
 	}
 
-	public static void selection() {
+	private static void selection() {
 		parkingLot.print();
 		while (true) {
 			System.out.println("Type the number below to perform the assosiated action" + "\n1 - Park your vehicle"
@@ -46,7 +46,7 @@ public class ParkingService {
 		
 	}
 
-	public static Customer createCustomer() {
+	private static Customer createCustomer() {
 		System.out
 				.println("Select the adequate parking type!" + "\n1 - regular" + "\n2 - handicapped" + "\n3 - compact");
 		int parkingTypeChoice = scan.nextInt();
@@ -72,7 +72,7 @@ public class ParkingService {
 		return customer;
 	}
 
-	public static Vehicle createVehicle() {
+	private static Vehicle createVehicle() {
 		System.out.println("Select your vehicle size" + "\n1 - small\n2 - medium\n3 - large");
 		int vehicleChoice = scan.nextInt();
 		String vehicleSize = "";
@@ -100,7 +100,7 @@ public class ParkingService {
 		return vehicle;
 	}
 
-	public static void parkVehicleWithCoordinates() {
+	private static void parkVehicleWithCoordinates() {
 		Customer customer = createCustomer();
 		System.out.println("Enter the parking row and column in form (n n) ");
 		int row = scan.nextInt();
@@ -114,7 +114,7 @@ public class ParkingService {
 				+ "\nMake sure to keep a reference while picking up your vehicle");
 	}
 
-	public static void parkVehicleThroughVelvet() {
+	private static void parkVehicleThroughVelvet() {
 		Customer customer = createCustomer();
 		System.out.println("Which gate you are entering through?" + "\n1 - front gate" + "\n2 - back gate");
 		int gateChoice = 0;
